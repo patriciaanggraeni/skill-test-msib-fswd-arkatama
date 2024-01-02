@@ -27,8 +27,8 @@ class DataController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate(['input_data' => 'required|string',]);
-        $input_data = explode(' ', strtoupper($request->input('input_data')));
+        $request->validate(['data' => 'required|string',]);
+        $input_data = explode(' ', strtoupper($request->input('data')));
         $age = 0;
 
         foreach ($input_data as $input_word) {

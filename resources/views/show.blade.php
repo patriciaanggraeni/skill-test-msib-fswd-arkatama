@@ -7,9 +7,9 @@
 </head>
 <body>
 
-    <h3>Semua Data:</h3>
+    <h3>Data:</h3>
     @foreach($show_data as $data)
-        <p>Nama: {{ $data->name }}</p>
+        <p>Nama: {{ explode(' ', $data->name)[0] . " " . explode(' ', $data->name)[1]  }}</p>
         <p>Usia: {{ $data->age }}</p>
         <p>Kota: {{ $data->city }}</p>
         <hr>
